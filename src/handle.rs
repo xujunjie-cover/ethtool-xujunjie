@@ -84,7 +84,7 @@ pub(crate) async fn ethtool_execute(
         // acked at the end.
         NLM_F_DUMP | NLM_F_REQUEST | NLM_F_ACK
     } else {
-        NLM_F_REQUEST
+        NLM_F_REQUEST | NLM_F_ACK
     };
 
     let mut nl_msg =
